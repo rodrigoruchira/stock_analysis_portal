@@ -1,3 +1,4 @@
+
 function loadPage(pageName) {
   const mainContent = document.getElementById('main-content');
   const navLinks = document.querySelectorAll('.nav-link'); // Select all navigation links
@@ -7,6 +8,7 @@ function loadPage(pageName) {
   });
 
   // Add 'active' class to the clicked link
+  if(typeof event!= "undefined")
   event.target.classList.add('active');
 
   fetchPageContent(`page/${pageName}`, (content) => {
@@ -14,6 +16,7 @@ function loadPage(pageName) {
     mainContent.appendChild(content);
     if (pageName === 'companyList') {
       fetchAndDisplayCompanies();
+      document.getElementById("btn-CompanyList").classList.add('active');
     }
   });
  
@@ -29,4 +32,7 @@ function loadPage(pageName) {
       })
       .catch(error => console.error(error));
   }
+
+  loadPage('home');
+  document.getElementById("btn-home").classList.add('active');
   
