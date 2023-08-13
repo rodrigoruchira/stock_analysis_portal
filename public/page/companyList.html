@@ -1,0 +1,53 @@
+
+<div class="container">
+  <h2>Company List</h2>
+  <div class="d-flex justify-content-end">
+    <button class="btn btn-primary" id="add-company-btn">Add New Company</button>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Company Name</th>
+        <th>Symbol</th>
+        <th>Sector</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="company-list">
+      <!-- Company records will be dynamically added here -->
+    </tbody>
+  </table>
+</div>
+<div class="modal" id="add-company-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add New Company</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="add-company-form">
+          <div class="form-group">
+            <label for="company-name">Company Name</label>
+            <input type="text" class="form-control" id="company-name" required>
+          </div>
+          <div class="form-group">
+            <label for="symbol">Symbol</label>
+            <input type="text" class="form-control" id="symbol" required>
+          </div>
+          <div class="form-group">
+            <label for="sector-dropdown">Sector</label>
+            <select class="form-control" id="sector-dropdown" required>
+              <!-- Dropdown options will be populated dynamically using JavaScript -->
+            </select>
+          </div>
+          <!-- Add more form inputs as needed -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="save-company-btn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Disable scrolling for the entire body */
+}
+
+#main-content {
+    overflow-y: auto;
+    /* Enable scrolling for the main content */
+    height: calc(100vh - 56px);
+    /* Adjust for the height of the top navigation bar */
+}
+
+.navbar {
+
+    background-color: #007bff;
+    /* Sky blue background color */
+    color: #fff;
+    /* White text color */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 900;
+}
+.navbar + .container-fluid {
+    margin-top: 56px; /* Adjust based on the height of the top navigation bar */
+  }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Set a high z-index to ensure it appears above the content */
+    background-color: #007bff;
+    color: white;
+    height: 100vh;
+  }
+
+.nav-link.active {
+    background-color: #001f3f;
+    /* Dark blue for selected page */
+}
+
+.logo {
+    height: 100px;
+    /* Adjust the height as needed */
+    background-color: #007bff;
+}
+.nav-link {
+    color: white; /* Set the text color to white */
+  }
+
